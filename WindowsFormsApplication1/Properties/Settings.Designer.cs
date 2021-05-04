@@ -178,5 +178,29 @@ namespace EngenixUpdateInstallerFTP.Properties {
                 this["FTP500URL"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Folder510 {
+            get {
+                return ((string)(this["Folder510"]));
+            }
+            set {
+                this["Folder510"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FTP510URL {
+            get {
+                return ((string)(this["FTP510URL"]));
+            }
+            set {
+                this["FTP510URL"] = value;
+            }
+        }
     }
 }

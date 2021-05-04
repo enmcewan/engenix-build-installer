@@ -67,6 +67,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.tbx510Folder = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnOpenExplorer510 = new System.Windows.Forms.Button();
+            this.tbx510Url = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabPaths.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabFTP.SuspendLayout();
@@ -78,6 +83,9 @@
             // 
             // tabPaths
             // 
+            this.tabPaths.Controls.Add(this.tbx510Folder);
+            this.tabPaths.Controls.Add(this.label14);
+            this.tabPaths.Controls.Add(this.btnOpenExplorer510);
             this.tabPaths.Controls.Add(this.tbx500Folder);
             this.tabPaths.Controls.Add(this.label11);
             this.tabPaths.Controls.Add(this.btnOpenExplorer500);
@@ -99,7 +107,7 @@
             this.tabPaths.Location = new System.Drawing.Point(4, 22);
             this.tabPaths.Name = "tabPaths";
             this.tabPaths.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPaths.Size = new System.Drawing.Size(406, 178);
+            this.tabPaths.Size = new System.Drawing.Size(406, 207);
             this.tabPaths.TabIndex = 0;
             this.tabPaths.Text = "Paths";
             this.tabPaths.UseVisualStyleBackColor = true;
@@ -304,11 +312,13 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(414, 204);
+            this.tabControl1.Size = new System.Drawing.Size(414, 233);
             this.tabControl1.TabIndex = 39;
             // 
             // tabFTP
             // 
+            this.tabFTP.Controls.Add(this.tbx510Url);
+            this.tabFTP.Controls.Add(this.label15);
             this.tabFTP.Controls.Add(this.tbx500Url);
             this.tabFTP.Controls.Add(this.label13);
             this.tabFTP.Controls.Add(this.tbx420Url);
@@ -325,7 +335,7 @@
             this.tabFTP.Controls.Add(this.label4);
             this.tabFTP.Location = new System.Drawing.Point(4, 22);
             this.tabFTP.Name = "tabFTP";
-            this.tabFTP.Size = new System.Drawing.Size(406, 178);
+            this.tabFTP.Size = new System.Drawing.Size(406, 207);
             this.tabFTP.TabIndex = 1;
             this.tabFTP.Text = "FTP";
             this.tabFTP.UseVisualStyleBackColor = true;
@@ -470,6 +480,55 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // tbx510Folder
+            // 
+            this.tbx510Folder.Enabled = false;
+            this.tbx510Folder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tbx510Folder.Location = new System.Drawing.Point(80, 167);
+            this.tbx510Folder.Name = "tbx510Folder";
+            this.tbx510Folder.Size = new System.Drawing.Size(291, 20);
+            this.tbx510Folder.TabIndex = 50;
+            this.tbx510Folder.TabStop = false;
+            this.tbx510Folder.Text = "C:\\Engenix\\510\\";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(13, 171);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(63, 13);
+            this.label14.TabIndex = 49;
+            this.label14.Text = "5.1.0 Folder";
+            // 
+            // btnOpenExplorer510
+            // 
+            this.btnOpenExplorer510.FlatAppearance.BorderSize = 0;
+            this.btnOpenExplorer510.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenExplorer510.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenExplorer510.Image")));
+            this.btnOpenExplorer510.Location = new System.Drawing.Point(377, 165);
+            this.btnOpenExplorer510.Name = "btnOpenExplorer510";
+            this.btnOpenExplorer510.Size = new System.Drawing.Size(23, 23);
+            this.btnOpenExplorer510.TabIndex = 48;
+            this.btnOpenExplorer510.UseVisualStyleBackColor = true;
+            this.btnOpenExplorer510.Click += new System.EventHandler(this.btnOpenExplorer510_Click);
+            // 
+            // tbx510Url
+            // 
+            this.tbx510Url.Location = new System.Drawing.Point(80, 171);
+            this.tbx510Url.Name = "tbx510Url";
+            this.tbx510Url.Size = new System.Drawing.Size(315, 20);
+            this.tbx510Url.TabIndex = 12;
+            this.tbx510Url.Text = "ftp://www.3epcb.com/DailyBuild/Engenix%205.1.0/";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(18, 174);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 13);
+            this.label15.TabIndex = 13;
+            this.label15.Text = "5.1.0 URL";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,5 +593,10 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox tbx420Url;
         private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.TextBox tbx510Folder;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnOpenExplorer510;
+        private System.Windows.Forms.TextBox tbx510Url;
+        private System.Windows.Forms.Label label15;
     }
 }

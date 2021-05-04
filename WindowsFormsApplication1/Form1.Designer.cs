@@ -44,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox33 = new System.Windows.Forms.CheckBox();
             this.checkBox32 = new System.Windows.Forms.CheckBox();
             this.checkBox31 = new System.Windows.Forms.CheckBox();
             this.checkBox30 = new System.Windows.Forms.CheckBox();
@@ -95,7 +96,6 @@
             this.pathsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fTPSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkBox33 = new System.Windows.Forms.CheckBox();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -268,6 +268,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "File Types";
             // 
+            // checkBox33
+            // 
+            this.checkBox33.AutoSize = true;
+            this.checkBox33.Location = new System.Drawing.Point(236, 16);
+            this.checkBox33.Name = "checkBox33";
+            this.checkBox33.Size = new System.Drawing.Size(41, 17);
+            this.checkBox33.TabIndex = 34;
+            this.checkBox33.TabStop = false;
+            this.checkBox33.Tag = "EngenixQT.exe";
+            this.checkBox33.Text = "QT";
+            this.toolTip1.SetToolTip(this.checkBox33, "Select  File Type");
+            this.checkBox33.UseVisualStyleBackColor = true;
+            // 
             // checkBox32
             // 
             this.checkBox32.AutoSize = true;
@@ -336,6 +349,7 @@
             // checkBox27
             // 
             this.checkBox27.AutoSize = true;
+            this.checkBox27.Enabled = false;
             this.checkBox27.Location = new System.Drawing.Point(26, 85);
             this.checkBox27.Name = "checkBox27";
             this.checkBox27.Size = new System.Drawing.Size(46, 17);
@@ -766,6 +780,7 @@
             // checkBox26
             // 
             this.checkBox26.AutoSize = true;
+            this.checkBox26.Enabled = false;
             this.checkBox26.Location = new System.Drawing.Point(88, 171);
             this.checkBox26.Name = "checkBox26";
             this.checkBox26.Size = new System.Drawing.Size(46, 17);
@@ -788,6 +803,7 @@
             "4.1.1",
             "4.2.0",
             "5.0.0",
+            "5.1.0",
             "Internal"});
             this.cBxDest.Location = new System.Drawing.Point(306, 31);
             this.cBxDest.Name = "cBxDest";
@@ -838,36 +854,23 @@
             // pathsToolStripMenuItem
             // 
             this.pathsToolStripMenuItem.Name = "pathsToolStripMenuItem";
-            this.pathsToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.pathsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.pathsToolStripMenuItem.Text = "Paths...";
             this.pathsToolStripMenuItem.Click += new System.EventHandler(this.pathsToolStripMenuItem_Click);
             // 
             // fTPSettingsToolStripMenuItem
             // 
             this.fTPSettingsToolStripMenuItem.Name = "fTPSettingsToolStripMenuItem";
-            this.fTPSettingsToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.fTPSettingsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.fTPSettingsToolStripMenuItem.Text = "FTP Settings...";
             this.fTPSettingsToolStripMenuItem.Click += new System.EventHandler(this.fTPSettingsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // checkBox33
-            // 
-            this.checkBox33.AutoSize = true;
-            this.checkBox33.Location = new System.Drawing.Point(236, 16);
-            this.checkBox33.Name = "checkBox33";
-            this.checkBox33.Size = new System.Drawing.Size(41, 17);
-            this.checkBox33.TabIndex = 34;
-            this.checkBox33.TabStop = false;
-            this.checkBox33.Tag = "EngenixQT.exe";
-            this.checkBox33.Text = "QT";
-            this.toolTip1.SetToolTip(this.checkBox33, "Select  File Type");
-            this.checkBox33.UseVisualStyleBackColor = true;
             // 
             // AppMainForm
             // 
