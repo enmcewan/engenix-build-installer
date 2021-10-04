@@ -460,7 +460,7 @@ namespace EngenixUpdateInstallerFTP
                     string fname = Path.GetFileNameWithoutExtension(filepath);
                     string ext = Path.GetExtension(filepath);
                     string ver = rootfolder.Substring(11, 3);
-                    string NewFile = Path.Combine(fname + "-" + ver + "." + ext);
+                    string NewFile = Path.Combine(fname + "_" + ver + "." + ext);
 
                     File.Move(filepath, rootfolder + subfolder + NewFile);
 
