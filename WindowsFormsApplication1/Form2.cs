@@ -42,6 +42,9 @@ namespace EngenixUpdateInstallerFTP
             if (getSettings.Folder510 != "")
                 tbx510Folder.Text = getSettings.Folder510;
 
+            if (getSettings.Folder520 != "")
+                tbx520Folder.Text = getSettings.Folder520;
+
             if (getSettings.FTPUser != "")
                 tbxFTPUser.Text = getSettings.FTPUser;
 
@@ -65,6 +68,9 @@ namespace EngenixUpdateInstallerFTP
 
             if (getSettings.FTP510URL != "")
                 tbx510Url.Text = getSettings.FTP510URL;
+
+            if (getSettings.FTP520URL != "")
+                tbx520Url.Text = getSettings.FTP520URL;
 
         }
 
@@ -99,6 +105,7 @@ namespace EngenixUpdateInstallerFTP
                 tbx420Folder.Text = tbxRootFolder.Text;
                 tbx500Folder.Text = tbxRootFolder.Text;
                 tbx510Folder.Text = tbxRootFolder.Text;
+                tbx520Folder.Text = tbxRootFolder.Text;
             }
         }
 
@@ -157,6 +164,17 @@ namespace EngenixUpdateInstallerFTP
             }
         }
 
+        private void btnOpenExplorer520_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialog1.SelectedPath = tbxRootFolder.Text;
+            DialogResult dlgResult = folderBrowserDialog1.ShowDialog();
+
+            if (dlgResult.Equals(DialogResult.OK))
+            {
+                tbx520Folder.Text = folderBrowserDialog1.SelectedPath + "\\";
+            }
+        }
+
         private void tbx401Url_TextChanged(object sender, EventArgs e)
         {
             if (!validURL(tbx401Url.Text))
@@ -203,6 +221,7 @@ namespace EngenixUpdateInstallerFTP
             EUISettings.uFolder420 = tbx420Folder.Text;
             EUISettings.uFolder500 = tbx500Folder.Text;
             EUISettings.uFolder510 = tbx510Folder.Text;
+            EUISettings.uFolder520 = tbx520Folder.Text;
             EUISettings.uFTPUser = tbxFTPUser.Text;
             EUISettings.uFTPPassword = tbxFTPPass.Text;
             EUISettings.uFTP401URL = tbx401Url.Text;
@@ -211,6 +230,7 @@ namespace EngenixUpdateInstallerFTP
             EUISettings.uFTP420URL = tbx420Url.Text;
             EUISettings.uFTP500URL = tbx500Url.Text;
             EUISettings.uFTP510URL = tbx510Url.Text;
+            EUISettings.uFTP520URL = tbx520Url.Text;
 
             EUISettings settings = new EUISettings();
             settings.RootFolder = tbxRootFolder.Text;
@@ -220,6 +240,7 @@ namespace EngenixUpdateInstallerFTP
             settings.Folder420 = tbx420Folder.Text;
             settings.Folder500 = tbx500Folder.Text;
             settings.Folder510 = tbx510Folder.Text;
+            settings.Folder520 = tbx520Folder.Text;
             settings.FTPUser = tbxFTPUser.Text;
             settings.FTPPassword = tbxFTPPass.Text;
             settings.FTP401URL = tbx401Url.Text;
@@ -228,6 +249,7 @@ namespace EngenixUpdateInstallerFTP
             settings.FTP420URL = tbx420Url.Text;
             settings.FTP500URL = tbx500Url.Text;
             settings.FTP510URL = tbx510Url.Text;
+            settings.FTP520URL = tbx520Url.Text;
 
             settings.SaveToAppSettings();
 
@@ -253,6 +275,21 @@ namespace EngenixUpdateInstallerFTP
             {
                 tbx411Url.Text = folderBrowserDialog1.SelectedPath + "\\";
             }
+        }
+
+        private void tbxFTPPass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbx510Folder_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
+        {
+
         }
 
     }

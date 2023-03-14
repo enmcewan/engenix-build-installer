@@ -31,6 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.tabPaths = new System.Windows.Forms.TabPage();
+            this.tbx520Folder = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.btnOpenExplorer520 = new System.Windows.Forms.Button();
+            this.tbx510Folder = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnOpenExplorer510 = new System.Windows.Forms.Button();
             this.tbx500Folder = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnOpenExplorer500 = new System.Windows.Forms.Button();
@@ -51,6 +57,10 @@
             this.btnOpenExplorer401 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabFTP = new System.Windows.Forms.TabPage();
+            this.tbx520Url = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.tbx510Url = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.tbx500Url = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tbx420Url = new System.Windows.Forms.TextBox();
@@ -67,11 +77,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.tbx510Folder = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.btnOpenExplorer510 = new System.Windows.Forms.Button();
-            this.tbx510Url = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.tabPaths.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabFTP.SuspendLayout();
@@ -80,9 +85,13 @@
             // folderBrowserDialog1
             // 
             this.folderBrowserDialog1.RootFolder = System.Environment.SpecialFolder.MyComputer;
+            this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
             // 
             // tabPaths
             // 
+            this.tabPaths.Controls.Add(this.tbx520Folder);
+            this.tabPaths.Controls.Add(this.label16);
+            this.tabPaths.Controls.Add(this.btnOpenExplorer520);
             this.tabPaths.Controls.Add(this.tbx510Folder);
             this.tabPaths.Controls.Add(this.label14);
             this.tabPaths.Controls.Add(this.btnOpenExplorer510);
@@ -107,16 +116,81 @@
             this.tabPaths.Location = new System.Drawing.Point(4, 22);
             this.tabPaths.Name = "tabPaths";
             this.tabPaths.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPaths.Size = new System.Drawing.Size(406, 207);
+            this.tabPaths.Size = new System.Drawing.Size(406, 232);
             this.tabPaths.TabIndex = 0;
             this.tabPaths.Text = "Paths";
             this.tabPaths.UseVisualStyleBackColor = true;
+            // 
+            // tbx520Folder
+            // 
+            this.tbx520Folder.Enabled = false;
+            this.tbx520Folder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tbx520Folder.Location = new System.Drawing.Point(80, 196);
+            this.tbx520Folder.Name = "tbx520Folder";
+            this.tbx520Folder.Size = new System.Drawing.Size(291, 20);
+            this.tbx520Folder.TabIndex = 53;
+            this.tbx520Folder.TabStop = false;
+            this.tbx520Folder.Text = "C:\\Engenix\\520\\";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(13, 200);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(63, 13);
+            this.label16.TabIndex = 52;
+            this.label16.Text = "5.2.0 Folder";
+            // 
+            // btnOpenExplorer520
+            // 
+            this.btnOpenExplorer520.FlatAppearance.BorderSize = 0;
+            this.btnOpenExplorer520.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenExplorer520.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenExplorer520.Image")));
+            this.btnOpenExplorer520.Location = new System.Drawing.Point(377, 194);
+            this.btnOpenExplorer520.Name = "btnOpenExplorer520";
+            this.btnOpenExplorer520.Size = new System.Drawing.Size(23, 23);
+            this.btnOpenExplorer520.TabIndex = 51;
+            this.btnOpenExplorer520.UseVisualStyleBackColor = true;
+            this.btnOpenExplorer520.Click += new System.EventHandler(this.btnOpenExplorer520_Click);
+            // 
+            // tbx510Folder
+            // 
+            this.tbx510Folder.Enabled = false;
+            this.tbx510Folder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tbx510Folder.Location = new System.Drawing.Point(80, 170);
+            this.tbx510Folder.Name = "tbx510Folder";
+            this.tbx510Folder.Size = new System.Drawing.Size(291, 20);
+            this.tbx510Folder.TabIndex = 50;
+            this.tbx510Folder.TabStop = false;
+            this.tbx510Folder.Text = "C:\\Engenix\\510\\";
+            this.tbx510Folder.TextChanged += new System.EventHandler(this.tbx510Folder_TextChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(13, 174);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(63, 13);
+            this.label14.TabIndex = 49;
+            this.label14.Text = "5.1.0 Folder";
+            // 
+            // btnOpenExplorer510
+            // 
+            this.btnOpenExplorer510.FlatAppearance.BorderSize = 0;
+            this.btnOpenExplorer510.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenExplorer510.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenExplorer510.Image")));
+            this.btnOpenExplorer510.Location = new System.Drawing.Point(377, 168);
+            this.btnOpenExplorer510.Name = "btnOpenExplorer510";
+            this.btnOpenExplorer510.Size = new System.Drawing.Size(23, 23);
+            this.btnOpenExplorer510.TabIndex = 48;
+            this.btnOpenExplorer510.UseVisualStyleBackColor = true;
+            this.btnOpenExplorer510.Click += new System.EventHandler(this.btnOpenExplorer510_Click);
             // 
             // tbx500Folder
             // 
             this.tbx500Folder.Enabled = false;
             this.tbx500Folder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbx500Folder.Location = new System.Drawing.Point(80, 141);
+            this.tbx500Folder.Location = new System.Drawing.Point(80, 144);
             this.tbx500Folder.Name = "tbx500Folder";
             this.tbx500Folder.Size = new System.Drawing.Size(291, 20);
             this.tbx500Folder.TabIndex = 47;
@@ -126,7 +200,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 145);
+            this.label11.Location = new System.Drawing.Point(13, 148);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 13);
             this.label11.TabIndex = 46;
@@ -137,7 +211,7 @@
             this.btnOpenExplorer500.FlatAppearance.BorderSize = 0;
             this.btnOpenExplorer500.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenExplorer500.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenExplorer500.Image")));
-            this.btnOpenExplorer500.Location = new System.Drawing.Point(377, 139);
+            this.btnOpenExplorer500.Location = new System.Drawing.Point(377, 142);
             this.btnOpenExplorer500.Name = "btnOpenExplorer500";
             this.btnOpenExplorer500.Size = new System.Drawing.Size(23, 23);
             this.btnOpenExplorer500.TabIndex = 45;
@@ -148,7 +222,7 @@
             // 
             this.tbx420Folder.Enabled = false;
             this.tbx420Folder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbx420Folder.Location = new System.Drawing.Point(80, 115);
+            this.tbx420Folder.Location = new System.Drawing.Point(80, 118);
             this.tbx420Folder.Name = "tbx420Folder";
             this.tbx420Folder.Size = new System.Drawing.Size(291, 20);
             this.tbx420Folder.TabIndex = 44;
@@ -158,7 +232,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 119);
+            this.label10.Location = new System.Drawing.Point(13, 122);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(63, 13);
             this.label10.TabIndex = 43;
@@ -168,7 +242,7 @@
             // 
             this.tbx411Folder.Enabled = false;
             this.tbx411Folder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbx411Folder.Location = new System.Drawing.Point(80, 89);
+            this.tbx411Folder.Location = new System.Drawing.Point(80, 92);
             this.tbx411Folder.Name = "tbx411Folder";
             this.tbx411Folder.Size = new System.Drawing.Size(291, 20);
             this.tbx411Folder.TabIndex = 41;
@@ -178,7 +252,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 93);
+            this.label8.Location = new System.Drawing.Point(13, 96);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 13);
             this.label8.TabIndex = 40;
@@ -190,7 +264,7 @@
             this.btnOpenExplorer420.FlatAppearance.BorderSize = 0;
             this.btnOpenExplorer420.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenExplorer420.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenExplorer420.Image")));
-            this.btnOpenExplorer420.Location = new System.Drawing.Point(377, 113);
+            this.btnOpenExplorer420.Location = new System.Drawing.Point(377, 116);
             this.btnOpenExplorer420.Name = "btnOpenExplorer420";
             this.btnOpenExplorer420.Size = new System.Drawing.Size(23, 23);
             this.btnOpenExplorer420.TabIndex = 42;
@@ -202,7 +276,7 @@
             this.btnOpenExplorer411.FlatAppearance.BorderSize = 0;
             this.btnOpenExplorer411.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenExplorer411.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenExplorer411.Image")));
-            this.btnOpenExplorer411.Location = new System.Drawing.Point(377, 87);
+            this.btnOpenExplorer411.Location = new System.Drawing.Point(377, 90);
             this.btnOpenExplorer411.Name = "btnOpenExplorer411";
             this.btnOpenExplorer411.Size = new System.Drawing.Size(23, 23);
             this.btnOpenExplorer411.TabIndex = 39;
@@ -224,7 +298,7 @@
             // 
             this.tbx410Folder.Enabled = false;
             this.tbx410Folder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbx410Folder.Location = new System.Drawing.Point(80, 64);
+            this.tbx410Folder.Location = new System.Drawing.Point(80, 67);
             this.tbx410Folder.Name = "tbx410Folder";
             this.tbx410Folder.Size = new System.Drawing.Size(291, 20);
             this.tbx410Folder.TabIndex = 36;
@@ -235,7 +309,7 @@
             // 
             this.tbx401Folder.Enabled = false;
             this.tbx401Folder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbx401Folder.Location = new System.Drawing.Point(80, 38);
+            this.tbx401Folder.Location = new System.Drawing.Point(80, 41);
             this.tbx401Folder.Name = "tbx401Folder";
             this.tbx401Folder.Size = new System.Drawing.Size(291, 20);
             this.tbx401Folder.TabIndex = 33;
@@ -245,7 +319,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 67);
+            this.label3.Location = new System.Drawing.Point(12, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 37;
@@ -268,7 +342,7 @@
             this.btnOpenExplorer410.FlatAppearance.BorderSize = 0;
             this.btnOpenExplorer410.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenExplorer410.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenExplorer410.Image")));
-            this.btnOpenExplorer410.Location = new System.Drawing.Point(377, 63);
+            this.btnOpenExplorer410.Location = new System.Drawing.Point(377, 66);
             this.btnOpenExplorer410.Name = "btnOpenExplorer410";
             this.btnOpenExplorer410.Size = new System.Drawing.Size(23, 23);
             this.btnOpenExplorer410.TabIndex = 38;
@@ -287,7 +361,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 41);
+            this.label2.Location = new System.Drawing.Point(12, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 34;
@@ -298,7 +372,7 @@
             this.btnOpenExplorer401.FlatAppearance.BorderSize = 0;
             this.btnOpenExplorer401.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenExplorer401.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenExplorer401.Image")));
-            this.btnOpenExplorer401.Location = new System.Drawing.Point(377, 38);
+            this.btnOpenExplorer401.Location = new System.Drawing.Point(377, 41);
             this.btnOpenExplorer401.Name = "btnOpenExplorer401";
             this.btnOpenExplorer401.Size = new System.Drawing.Size(23, 23);
             this.btnOpenExplorer401.TabIndex = 35;
@@ -312,11 +386,13 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(414, 233);
+            this.tabControl1.Size = new System.Drawing.Size(414, 258);
             this.tabControl1.TabIndex = 39;
             // 
             // tabFTP
             // 
+            this.tabFTP.Controls.Add(this.tbx520Url);
+            this.tabFTP.Controls.Add(this.label17);
             this.tabFTP.Controls.Add(this.tbx510Url);
             this.tabFTP.Controls.Add(this.label15);
             this.tabFTP.Controls.Add(this.tbx500Url);
@@ -335,10 +411,44 @@
             this.tabFTP.Controls.Add(this.label4);
             this.tabFTP.Location = new System.Drawing.Point(4, 22);
             this.tabFTP.Name = "tabFTP";
-            this.tabFTP.Size = new System.Drawing.Size(406, 207);
+            this.tabFTP.Size = new System.Drawing.Size(406, 232);
             this.tabFTP.TabIndex = 1;
             this.tabFTP.Text = "FTP";
             this.tabFTP.UseVisualStyleBackColor = true;
+            // 
+            // tbx520Url
+            // 
+            this.tbx520Url.Location = new System.Drawing.Point(80, 197);
+            this.tbx520Url.Name = "tbx520Url";
+            this.tbx520Url.Size = new System.Drawing.Size(315, 20);
+            this.tbx520Url.TabIndex = 14;
+            this.tbx520Url.Text = "ftp://www.3epcb.com/DailyBuild/Engenix%205.2.0/";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(18, 200);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(56, 13);
+            this.label17.TabIndex = 15;
+            this.label17.Text = "5.2.0 URL";
+            // 
+            // tbx510Url
+            // 
+            this.tbx510Url.Location = new System.Drawing.Point(80, 171);
+            this.tbx510Url.Name = "tbx510Url";
+            this.tbx510Url.Size = new System.Drawing.Size(315, 20);
+            this.tbx510Url.TabIndex = 12;
+            this.tbx510Url.Text = "ftp://www.3epcb.com/DailyBuild/Engenix%205.1.0/";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(18, 174);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 13);
+            this.label15.TabIndex = 13;
+            this.label15.Text = "5.1.0 URL";
             // 
             // tbx500Url
             // 
@@ -411,11 +521,14 @@
             // 
             // tbxFTPPass
             // 
+            this.tbxFTPPass.CausesValidation = false;
             this.tbxFTPPass.Location = new System.Drawing.Point(287, 15);
             this.tbxFTPPass.Name = "tbxFTPPass";
             this.tbxFTPPass.Size = new System.Drawing.Size(108, 20);
             this.tbxFTPPass.TabIndex = 2;
+            this.tbxFTPPass.Text = "3EPCB2013";
             this.tbxFTPPass.UseSystemPasswordChar = true;
+            this.tbxFTPPass.TextChanged += new System.EventHandler(this.tbxFTPPass_TextChanged);
             // 
             // tbxFTPUser
             // 
@@ -423,6 +536,7 @@
             this.tbxFTPUser.Name = "tbxFTPUser";
             this.tbxFTPUser.Size = new System.Drawing.Size(108, 20);
             this.tbxFTPUser.TabIndex = 1;
+            this.tbxFTPUser.Text = "3epcbcom";
             // 
             // tbx410Url
             // 
@@ -462,7 +576,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(268, 263);
+            this.btnOK.Location = new System.Drawing.Point(266, 276);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 40;
@@ -472,7 +586,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(349, 263);
+            this.btnCancel.Location = new System.Drawing.Point(347, 276);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 41;
@@ -480,60 +594,11 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // tbx510Folder
-            // 
-            this.tbx510Folder.Enabled = false;
-            this.tbx510Folder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbx510Folder.Location = new System.Drawing.Point(80, 167);
-            this.tbx510Folder.Name = "tbx510Folder";
-            this.tbx510Folder.Size = new System.Drawing.Size(291, 20);
-            this.tbx510Folder.TabIndex = 50;
-            this.tbx510Folder.TabStop = false;
-            this.tbx510Folder.Text = "C:\\Engenix\\510\\";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(13, 171);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(63, 13);
-            this.label14.TabIndex = 49;
-            this.label14.Text = "5.1.0 Folder";
-            // 
-            // btnOpenExplorer510
-            // 
-            this.btnOpenExplorer510.FlatAppearance.BorderSize = 0;
-            this.btnOpenExplorer510.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenExplorer510.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenExplorer510.Image")));
-            this.btnOpenExplorer510.Location = new System.Drawing.Point(377, 165);
-            this.btnOpenExplorer510.Name = "btnOpenExplorer510";
-            this.btnOpenExplorer510.Size = new System.Drawing.Size(23, 23);
-            this.btnOpenExplorer510.TabIndex = 48;
-            this.btnOpenExplorer510.UseVisualStyleBackColor = true;
-            this.btnOpenExplorer510.Click += new System.EventHandler(this.btnOpenExplorer510_Click);
-            // 
-            // tbx510Url
-            // 
-            this.tbx510Url.Location = new System.Drawing.Point(80, 171);
-            this.tbx510Url.Name = "tbx510Url";
-            this.tbx510Url.Size = new System.Drawing.Size(315, 20);
-            this.tbx510Url.TabIndex = 12;
-            this.tbx510Url.Text = "ftp://www.3epcb.com/DailyBuild/Engenix%205.1.0/";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(18, 174);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 13);
-            this.label15.TabIndex = 13;
-            this.label15.Text = "5.1.0 URL";
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 298);
+            this.ClientSize = new System.Drawing.Size(438, 309);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.tabControl1);
@@ -598,5 +663,10 @@
         private System.Windows.Forms.Button btnOpenExplorer510;
         private System.Windows.Forms.TextBox tbx510Url;
         private System.Windows.Forms.Label label15;
+        public System.Windows.Forms.TextBox tbx520Folder;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnOpenExplorer520;
+        private System.Windows.Forms.TextBox tbx520Url;
+        private System.Windows.Forms.Label label17;
     }
 }

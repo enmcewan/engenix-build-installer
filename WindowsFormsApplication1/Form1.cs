@@ -35,6 +35,7 @@ namespace EngenixUpdateInstallerFTP
             EUISettings.uFolder420 = @"C:\Engenix\411\";
             EUISettings.uFolder500 = @"C:\Engenix\500\";
             EUISettings.uFolder510 = @"C:\Engenix\510\";
+            EUISettings.uFolder520 = @"C:\Engenix\520\";
             EUISettings.uFTPUser = "3epcbcom";
             EUISettings.uFTPPassword = "";  // Keep blank for security purposes
             EUISettings.uFTP401URL = "ftp://www.3epcb.com/DailyBuild/Engenix%204.0.0/";
@@ -43,6 +44,7 @@ namespace EngenixUpdateInstallerFTP
             EUISettings.uFTP420URL = "ftp://www.3epcb.com/DailyBuild/Engenix%204.2.0/";
             EUISettings.uFTP500URL = "ftp://www.3epcb.com/DailyBuild/Engenix%205.0.0/";
             EUISettings.uFTP510URL = "ftp://www.3epcb.com/DailyBuild/Engenix%205.1.0/";
+            EUISettings.uFTP520URL = "ftp://www.3epcb.com/DailyBuild/Engenix%205.2.0/";
             EUISettings.pFTPRoot = "ftp://www.3epcb.com/";
             EUISettings.pFTPInternal = "ftp://www.3epcb.com/internal/";
             EUISettings.pDestFolder = EUISettings.uRootFolder;
@@ -72,6 +74,9 @@ namespace EngenixUpdateInstallerFTP
 
             if (getSettings.Folder510 != "")
                 EUISettings.uFolder510 = getSettings.Folder510;
+
+            if (getSettings.Folder520 != "")
+                EUISettings.uFolder520 = getSettings.Folder520;
 
             if (getSettings.FTPUser != "")
                 EUISettings.uFTPUser = getSettings.FTPUser;
@@ -543,7 +548,7 @@ namespace EngenixUpdateInstallerFTP
             if (checkBox1.Checked)
             {
                 checkBox4.Checked = true;
-                checkBox3.Checked = true;
+                checkBox3.Checked = false;
                 checkBox2.Checked = true;
 
                 if (tbxFTPFileName.Text.Length > 13)
@@ -574,7 +579,7 @@ namespace EngenixUpdateInstallerFTP
             if (checkBox8.Checked)
             {
                 checkBox5.Checked = true;
-                checkBox6.Checked = true;
+                checkBox6.Checked = false;
             }
             else
             {
@@ -751,7 +756,7 @@ namespace EngenixUpdateInstallerFTP
                 bgwGetFileFromFTP.CancelAsync();
             }
 
-            else if (s.EndsWith("downloaded successfully")) ;
+            else if (s.EndsWith("downloaded successfully"))
             {
                 btnGetFileFTP.Enabled = true;
                 btnCancelFTP.Enabled = false;
@@ -774,6 +779,7 @@ namespace EngenixUpdateInstallerFTP
             string destFldr420 = EUISettings.uFolder420;
             string destFldr500 = EUISettings.uFolder500;
             string destFldr510 = EUISettings.uFolder510;
+            string destFldr520 = EUISettings.uFolder520;
             string destFolder = EUISettings.uRootFolder;
             string version;
 
@@ -823,6 +829,13 @@ namespace EngenixUpdateInstallerFTP
                 {
                     destFolder = destFldr510;
                     cBxDest.SelectedIndex = cBxDest.FindStringExact("5.1.0");
+                    cBxDest.Enabled = false;
+                }
+
+                else if (version == "5.2.0")
+                {
+                    destFolder = destFldr520;
+                    cBxDest.SelectedIndex = cBxDest.FindStringExact("5.2.0");
                     cBxDest.Enabled = false;
                 }
 
@@ -1017,6 +1030,11 @@ namespace EngenixUpdateInstallerFTP
                 case "5.1.0":
                     EUISettings.pFTPSourceFolder = EUISettings.uFTP510URL;
                     EUISettings.pDestFolder = EUISettings.uFolder510;
+                    break;
+
+                case "5.2.0":
+                    EUISettings.pFTPSourceFolder = EUISettings.uFTP520URL;
+                    EUISettings.pDestFolder = EUISettings.uFolder520;
                     break;
 
                 case "Root":
